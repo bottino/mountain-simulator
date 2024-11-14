@@ -1,0 +1,20 @@
+<!--Description du systeme-->
+
+<Systeme>
+
+	<Ciel3D>
+	<ChampPotentiel>
+		<Dimensions> 30 30 30 </Dimensions>
+		<Lambda> 0.689655 </Lambda>
+		<Epsilon> 0.1 </Epsilon>
+		<ChaineMontagne>
+			<MontagneHMB>
+				<Altitude> 15.0 </Altitude>
+				<SousDivisions> 3 </SousDivisions>
+			</MontagneHMB>
+		</ChaineMontagne>
+		<Vinf> 20.0 </Vinf>
+	</ChampPotentiel>
+	</Ciel3D>
+	
+</Systeme>

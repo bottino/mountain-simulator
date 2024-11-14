@@ -1,0 +1,22 @@
+<!--Description du systeme-->
+
+<Systeme>
+	
+	<Ciel3D>
+	<ChampPotentiel>
+	<!--C'est bien parti !-->
+		<Dimensions> </Dimensions>
+		<Lambda>  </Lambda>
+		<Epsilon>  </Epsilon>
+		<ChaineMontagne>
+			<MontagneHMB>
+				<Dimensions> </Dimensions>
+				<SousDivisions>  </SousDivisions>
+			</MontagneHMB>
+		</ChaineMontagne>
+		<Vinf> </Vinf>
+	</ChampPotentiel>
+	</Ciel3D>
+	<!--On est arrivé!-->
+</Systeme>
+<!--Ce commentaire est invisible -->
