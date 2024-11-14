@@ -12,7 +12,7 @@
 
 
 Control::Control(wxString titre, wxSize taille)
-: wxFrame(0, wxID_ANY, titre, wxDefaultPosition, taille, wxDEFAULT_FRAME_STYLE & ~ (wxRESIZE_BORDER | wxMAXIMIZE_BOX))
+: wxFrame(nullptr, wxID_ANY, titre, wxDefaultPosition, taille, wxDEFAULT_FRAME_STYLE & ~ (wxRESIZE_BORDER | wxMAXIMIZE_BOX))
 {wxString choix[2]={wxT("Montagne Height_Map_Based."), wxT("Montagne gaussienne")};
 wxString reponse= wxGetSingleChoice(wxT("Choisissez votre montagne"), wxT("Montagne"), 2,choix);
 tab = new vector<ChaineMontagne*>(0);
