@@ -18,6 +18,7 @@ private:
     int lxSouris;
     int lySouris;
 
+    wxGLContext* glContext;
 };
 
  

@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <GL/glu.h>
 
 using namespace std;
  

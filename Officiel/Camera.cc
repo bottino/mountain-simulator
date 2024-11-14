@@ -1,5 +1,6 @@
 #include "Camera.h"
 #include <math.h>
+#include <GL/glu.h>
 
 #define DEFAULT_R 60
 #define DEFAULT_THETA 0.85

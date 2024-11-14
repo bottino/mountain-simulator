@@ -1,4 +1,4 @@
-CXX = g++-4.7
+CXX = g++
 CC  = $(CXX)
 
 CXXFLAGS = -std=c++11 -Wall
@@ -11,8 +11,8 @@ LDLIBS   = -lglut -lGLU -lGL -lXmu -lXi `wx-config --libs gl,core,base`
 
 all: simulation
 
+simulation: simulation.o Application.o VueOpenGL.o Camera.o Systeme.o Potentiel.o Montagne.o ChampPotentiel.o Vecteur2D.o CubeDAir.o Ciel.o Ciel3D.o Montagne3D.o ChaineMontagne.o Dessinable.o FenetreGL.o TextureManager.o Couleur.o Terrain.o Sapin.o Soleil.o MontagneHMB.o Billboard.o Control.o Conversions.o ChaineMontagne3D.o
 simulation.o : simulation.cc
-simulation: Application.o VueOpenGL.o Camera.o Systeme.o Potentiel.o Montagne.o ChampPotentiel.o Vecteur2D.o CubeDAir.o Ciel.o Ciel3D.o Montagne3D.o ChaineMontagne.o Dessinable.o FenetreGL.o TextureManager.o Couleur.o Terrain.o Sapin.o Soleil.o MontagneHMB.o Billboard.o Control.o Conversions.o ChaineMontagne3D.o
 
 Control.o: Control.cc
 Application.o : Application.cc

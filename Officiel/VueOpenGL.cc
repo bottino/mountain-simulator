@@ -7,7 +7,8 @@ Camera camera;
 int lx; int ly;
 
 VueOpenGL::VueOpenGL(wxWindow* parent, wxSize const& taille, wxPoint const& position)
-:wxGLCanvas(parent, wxID_ANY, position, taille, wxSUNKEN_BORDER)
+:wxGLCanvas(parent, wxID_ANY, NULL, position, taille, 0, wxGLCanvasName, wxNullPalette),
+  glContext(new wxGLContext(this))
 {
     Connect(wxEVT_PAINT, wxPaintEventHandler(VueOpenGL::dessine));
     Connect(wxEVT_KEY_DOWN, wxKeyEventHandler(VueOpenGL::appuiTouche));
@@ -45,8 +46,8 @@ void VueOpenGL::mouvementSouris(wxMouseEvent& event)
 void VueOpenGL::InitOpenGL()
 {
 //indique que les instructions OpenGL s'adressent au contexte
-// OpenGL courant
-SetCurrent();
+
+SetCurrent(*glContext);
  
 // Active la gestion de la profondeur
 glEnable(GL_DEPTH_TEST);
@@ -68,7 +69,7 @@ glMatrixMode(GL_MODELVIEW);
 void VueOpenGL::dessine(wxPaintEvent& event)
 {
     // indique que le code est relatif au contexte OPenGL courant
-    SetCurrent();
+    SetCurrent(*glContext);
      //initialise les données liées à la gestion de la profondeur
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
      
